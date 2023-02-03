@@ -1,0 +1,33 @@
+{
+  "data": {
+    "allUsers": [
+      {
+        "userId": "1",
+        "name": "AMol Birajdar",
+        "email": "abirajdar4@altimetrik.com",
+        "salary": 1003.89,
+        "monthlyExpenses": 400.56,
+        "account": null
+      },
+      {
+        "userId": "2",
+        "name": "AMol Birajdar",
+        "email": "abirajdar5@altimetrik.com",
+        "salary": 2003.89,
+        "monthlyExpenses": 400.56,
+        "account": {
+          "accountNumber": "6780006668",
+          "accountType": "DEBIT"
+        }
+      },
+      {
+        "userId": "3",
+        "name": "AMol Birajdar",
+        "email": "aftab@altimetrik.com",
+        "salary": 2003.89,
+        "monthlyExpenses": 400.56,
+        "account": null
+      }
+    ]
+  }
+}

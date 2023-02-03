@@ -1,0 +1,61 @@
+#Bean type
+type User{
+    userId:ID!
+    name:String!
+    email:String!
+    salary:Float!
+    monthlyExpenses:Float!
+}
+
+type Account{
+    accountId:ID!
+    accountType:String!
+    userId:Int!
+    accountNumber:String!
+}
+type UserAccount{
+    userId:ID
+    name:String
+    email:String
+    salary:Float
+    monthlyExpenses:Float
+    account:Account
+    accountNumber:String
+
+}
+
+
+type GraphqlResponse{
+    res: UserAccount
+    message:String
+    error:String
+}
+
+#Query
+type Query{
+    allUsers:[UserAccount]
+    getUser(userId:ID!):UserAccount
+}
+
+#Mutation
+type Mutation{
+    createUser(user:UserRequest):GraphqlResponse
+    createAccount(account:AccountRequest):GraphqlResponse
+}
+
+#Input
+input UserRequest{
+    name:String
+    email:String
+    salary:Float
+    monthlyExpenses:Float
+    accountType:String
+}
+input AccountRequest{
+    accountType:String
+    userId:ID
+}
+
+union res= User   | Account
+
+
